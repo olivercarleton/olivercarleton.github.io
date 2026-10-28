@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oliver Carleton</title>
+<meta name="description" content="Oliver Carleton. AI engineer in New York building agents, data pipelines and products that make it to production.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Oliver Carleton, home">
+      <svg class="brand-mark" viewBox="0 0 28 28" aria-hidden="true">
+        <defs><linearGradient id="qg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9ea3ff"/><stop offset="1" stop-color="#5e6ad2"/></linearGradient></defs>
+        <circle cx="14" cy="14" r="11" fill="none" stroke="url(#qg)" stroke-width="1.4"/>
+        <g class="orbit"><ellipse cx="14" cy="14" rx="11" ry="4" fill="none" stroke="url(#qg)" stroke-width="1" opacity=".85"/></g>
+        <ellipse cx="14" cy="14" rx="4" ry="11" fill="none" stroke="url(#qg)" stroke-width="1" opacity=".45"/>
+        <line x1="14" y1="14" x2="20.5" y2="6.5" stroke="#f7f8f8" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="20.5" cy="6.5" r="2.1" fill="#f7f8f8"/>
+        <circle cx="14" cy="14" r="1.4" fill="url(#qg)"/>
+      </svg>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#work" data-nav="work">Work</a>
+      <a href="#projects" data-nav="projects">Projects</a>
+      <a href="#skills" data-nav="skills">Skills</a>
+      <a href="#education" data-nav="education">Education</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="kbd-btn" id="cmdOpen" type="button" aria-label="Open command menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl">Search</span></button>
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3a9 9 0 1 0 9 9c0-.5 0-1-.1-1.4A6.5 6.5 0 0 1 12.4 3.1C12.3 3 12.1 3 12 3z"/></svg>
+      </button>
+      <a class="icon-btn" href="https://github.com/olivercarleton" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+      </a>
+      <button class="icon-btn nav-toggle" id="navToggle" type="button" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><canvas id="heroCanvas" aria-hidden="true"></canvas></div>
+  <div class="wrap">
+    <div class="pill"><span class="dot"></span>Now <b>AI Integration Engineer</b> at Texas Capital</div>
+    <h1 id="headline">Oliver Carleton</h1>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#projects">View projects
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn" href="https://github.com/olivercarleton" target="_blank" rel="noopener">GitHub</a>
+      <button class="btn" type="button" data-copy="ogcarleton@gmail.com">Copy email</button>
+    </div>
+
+    <div class="console-frame" id="console" aria-label="Animated demo of an agent delivery pipeline">
+      <div class="console-bar">
+        <span class="lights"><i></i><i></i><i></i></span>
+        <span class="crumb">AI Platform <span>/</span> <b>Agent Ops</b> <span>/</span> stakeholder pipeline</span>
+        <span class="right"><span class="mono" id="clock">00:00:00</span><span class="live"><i></i>live</span></span>
+      </div>
+      <div class="console-body">
+        <div class="board" id="board">
+          <div class="col" data-stage="0"><div class="col-h" style="--c:#8a8f98"><i></i>Intake<span class="n">0</span></div></div>
+          <div class="col" data-stage="1"><div class="col-h" style="--c:#f2c94c"><i></i>POC<span class="n">0</span></div></div>
+          <div class="col" data-stage="2"><div class="col-h" style="--c:#8b8fff"><i></i>Production<span class="n">0</span></div></div>
+          <div class="col" data-stage="3"><div class="col-h" style="--c:#4cb782"><i></i>Monitoring<span class="n">0</span></div></div>
+        </div>
+        <div class="side">
+          <div class="metric">
+            <div class="k"><span>Cycle time, repetitive steps</span><span class="mono">p50</span></div>
+            <div class="v"><span id="mCycle">3.0x</span><small>faster</small></div>
+            <canvas id="spark1" height="44"></canvas>
+          </div>
+          <div class="metric">
+            <div class="k"><span>Agents in production</span><span class="mono">6 groups</span></div>
+            <div class="v"><span id="mAgents">0</span><small id="mAgentsDelta">+0 this week</small></div>
+            <canvas id="spark2" height="44"></canvas>
+          </div>
+          <div class="log" id="log" aria-live="off"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="orgs">
+  <div class="wrap">
+    <span class="lbl">Experience across</span>
+    <span class="org">Texas Capital</span>
+    <span class="org">TS Imagine</span>
+    <span class="org">Ovation Data Services</span>
+    <a class="org" href="https://www.lambdaaisolutions.com/" target="_blank" rel="noopener">Lambda AI Solutions</a>
+    <span class="org">MediScope AI</span>
+    <span class="org">Tulane University</span>
+  </div>
+</div>
+
+<section class="flush" id="numbers">
+  <div class="wrap">
+    <div class="stats" id="stats">
+      <div class="stat"><div class="v"><span data-count="6"></span></div><div class="k">stakeholder groups with agents scoped, trained and deployed</div></div>
+      <div class="stat"><div class="v"><span data-count="3" data-suffix="x"></span></div><div class="k">faster cycle time on repetitive process steps</div></div>
+      <div class="stat"><div class="v"><span data-count="20" data-suffix="+"></span></div><div class="k">quarterly risk processes converted to scripted pipelines</div></div>
+      <div class="stat"><div class="v"><span data-count="20" data-suffix="M+"></span></div><div class="k">rows of exchange data optimized in Snowflake, 60% faster queries</div></div>
+      <div class="stat"><div class="v"><span data-count="50" data-suffix="+"></span></div><div class="k">investment banking deals in one predictive dashboard</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-h">
+      <div>
+        <div class="eyebrow">Work</div>
+        <h2>Work</h2>
+      </div>
+      <p>Pick a role.</p>
+    </div>
+    <div class="xp">
+      <div class="xp-list" role="tablist" aria-label="Roles">
+        <button class="xp-item active" role="tab" data-xp="tc2" type="button"><span class="lg">TC</span><span><span class="co">Texas Capital</span><br><span class="rl">AI Integration Engineer, Associate</span><br><span class="dt">Jun 2026 - now</span></span></button>
+        <button class="xp-item" role="tab" data-xp="tc1" type="button"><span class="lg">TC</span><span><span class="co">Texas Capital</span><br><span class="rl">AI/ML Risk Specialist, Analyst</span><br><span class="dt">Oct 2025 - Jun 2026</span></span></button>
+        <button class="xp-item" role="tab" data-xp="ms" type="button"><span class="lg">MS</span><span><span class="co">MediScope AI</span><br><span class="rl">Founder, Lead Software Engineer</span><br><span class="dt">Sep 2025 - now</span></span></button>
+        <button class="xp-item" role="tab" data-xp="la" type="button"><span class="lg">&lambda;</span><span><span class="co">Lambda AI Solutions</span><br><span class="rl">Lead Software Engineer</span><br><span class="dt">Sep 2024 - Sep 2025</span></span></button>
+        <button class="xp-item" role="tab" data-xp="ts" type="button"><span class="lg">TS</span><span><span class="co">TS Imagine</span><br><span class="rl">Data Engineer, Intern</span><br><span class="dt">May - Aug 2024</span></span></button>
+        <button class="xp-item" role="tab" data-xp="ov" type="button"><span class="lg">OV</span><span><span class="co">Ovation Data Services</span><br><span class="rl">Software Engineer, Intern</span><br><span class="dt">May - Aug 2023</span></span></button>
+      </div>
+      <div class="xp-panel" id="xpPanel">
+        <div class="xp-pane active" data-pane="tc2">
+          <div class="head"><h3>AI Integration Engineer, Associate</h3><span class="where">Texas Capital, Dallas</span><span class="when">Jun 2026 - present</span></div>
+          <div class="viz"><canvas data-viz="hub"></canvas><span class="readout" data-ro></span></div>
+          <div class="xp-metrics"><div class="xm"><div class="v">6</div><div class="k">stakeholder groups</div></div><div class="xm"><div class="v">3x</div><div class="k">cycle time</div></div><div class="xm"><div class="v">50+</div><div class="k">deals in dashboard</div></div><div class="xm"><div class="v">5</div><div class="k">engineers managed</div></div></div>
+          <div class="chips"><span class="chip">Snowflake Cortex</span><span class="chip">Streamlit</span><span class="chip">LangGraph</span><span class="chip">MCP</span><span class="chip">Agentic workflows</span><span class="chip">React</span></div>
+        </div>
+        <div class="xp-pane" data-pane="tc1">
+          <div class="head"><h3>AI/ML Risk Specialist, Analyst</h3><span class="where">Texas Capital, Dallas</span><span class="when">Oct 2025 - Jun 2026</span></div>
+          <div class="viz"><canvas data-viz="jobs"></canvas><span class="readout" data-ro></span></div>
+          <div class="xp-metrics"><div class="xm"><div class="v">8</div><div class="k">team datamarts</div></div><div class="xm"><div class="v">20+</div><div class="k">processes automated</div></div><div class="xm"><div class="v">1</div><div class="k">task force led</div></div></div>
+          <div class="chips"><span class="chip">Snowflake</span><span class="chip">Anomaly detection</span><span class="chip">LLM commentary</span><span class="chip">Process automation</span><span class="chip">Python</span><span class="chip">SQL</span></div>
+        </div>
+        <div class="xp-pane" data-pane="ms">
+          <div class="head"><h3>Founder, Lead Software Engineer</h3><span class="where">MediScope AI, New York</span><span class="when">Sep 2025 - present</span></div>
+          <div class="viz"><canvas data-viz="funnel"></canvas><span class="readout" data-ro></span></div>
+          <div class="xp-metrics"><div class="xm"><div class="v">Full stack</div><div class="k">backend, data, front end</div></div><div class="xm"><div class="v">VC</div><div class="k">pitches</div></div></div>
+          <div class="chips"><span class="chip">Full stack</span><span class="chip">React</span><span class="chip">Python</span><span class="chip">ML</span><span class="chip">Product</span></div>
+        </div>
+        <div class="xp-pane" data-pane="la">
+          <div class="head"><h3>Lead Software Engineer</h3><span class="where">Lambda AI Solutions, New York</span><span class="when">Sep 2024 - Sep 2025</span></div>
+          <div class="viz"><canvas data-viz="forecast"></canvas><span class="readout" data-ro></span></div>
+          <div class="xp-metrics"><div class="xm"><div class="v">7</div><div class="k">clients</div></div><div class="xm"><div class="v">8</div><div class="k">services</div></div></div>
+          <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">REST APIs</span><span class="chip">Web scraping</span><span class="chip">Predictive models</span></div>
+        </div>
+        <div class="xp-pane" data-pane="ts">
+          <div class="head"><h3>Data Engineer, Intern</h3><span class="where">TS Imagine, New York</span><span class="when">May - Aug 2024</span></div>
+          <div class="viz"><canvas data-viz="latency"></canvas><span class="readout" data-ro></span></div>
+          <div class="xp-metrics"><div class="xm"><div class="v">20M+</div><div class="k">rows optimized</div></div><div class="xm"><div class="v">60%</div><div class="k">faster queries</div></div><div class="xm"><div class="v">100+</div><div class="k">asset types</div></div><div class="xm"><div class="v">5+</div><div class="k">ML models</div></div></div>
+          <div class="chips"><span class="chip">Snowflake</span><span class="chip">SQL</span><span class="chip">scikit-learn</span><span class="chip">Pandas</span></div>
+        </div>
+        <div class="xp-pane" data-pane="ov">
+          <div class="head"><h3>Software Engineer, Intern</h3><span class="where">Ovation Data Services, Houston</span><span class="when">May - Aug 2023</span></div>
+          <div class="viz"><canvas data-viz="seismic"></canvas><span class="readout" data-ro></span></div>
+          <div class="xp-metrics"><div class="xm"><div class="v">65%</div><div class="k">faster processing</div></div><div class="xm"><div class="v">10k+</div><div class="k">datasets</div></div><div class="xm"><div class="v">250+</div><div class="k">wells standardized</div></div><div class="xm"><div class="v">40%</div><div class="k">forecast accuracy</div></div></div>
+          <div class="chips"><span class="chip">Python</span><span class="chip">C++</span><span class="chip">SEG-Y</span><span class="chip">NumPy</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-h">
+      <div>
+        <div class="eyebrow">Projects</div>
+        <h2>Projects</h2>
+      </div>
+      <p>Each tile runs the model behind the project. Hover to pause.</p>
+    </div>
+    <div class="bento" id="bento">
+      <article class="proj wide" data-tags="python react ml full-stack product">
+        <div class="viz"><canvas data-viz="ecg"></canvas><span class="readout" data-ro></span></div>
+        <div class="body"><div class="top"><h3>MediScope AI</h3><span class="role">Founder, 2025 - now</span></div>
+          <p>Full-stack healthcare diagnostics platform. Owned architecture across backend, data and front end, then redesigned the UI around monetization funnels for VC pitches.</p>
+          <div class="tags"><span>Python</span><span>React</span><span>ML</span><span>Full-stack</span></div></div>
+      </article>
+      <article class="proj wide" data-tags="snowflake python sql anomaly-detection llm streamlit agentic-workflows automation">
+        <div class="viz"><canvas data-viz="anomaly"></canvas><span class="readout" data-ro></span></div>
+        <div class="body"><div class="top"><h3>Risk Intelligence Dashboard</h3><span class="role">Texas Capital, 2025 - 26</span></div>
+          <p>Agentic predictive risk dashboard for the CRO. Eight teams' Snowflake datamarts feed historical models, anomaly-detection forecasts and LLM-written risk commentary.</p>
+          <div class="tags"><span>Snowflake</span><span>Python</span><span>Anomaly detection</span><span>LLM</span></div></div>
+      </article>
+
+      <article class="proj" data-tags="python sql rest-apis web-scraping automation">
+        <a class="lnk" href="https://www.lambdaaisolutions.com/" target="_blank" rel="noopener" aria-label="Lambda AI Solutions website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <div class="viz"><canvas data-viz="nodes"></canvas><span class="readout" data-ro></span></div>
+        <div class="body"><div class="top"><h3>Lambda AI Solutions</h3><span class="role">Lead Software Engineer</span></div>
+          <p>Workflow automation for small businesses: data pulled from multiple platforms into predictive models and reports clients actually used.</p>
+          <div class="tags"><span>Python</span><span>SQL</span><span>REST APIs</span><span>Automation</span></div></div>
+      </article>
+      <article class="proj" data-tags="python numpy pandas matplotlib backtesting quant">
+        <div class="viz"><canvas data-viz="vega"></canvas><span class="readout" data-ro></span></div>
+        <div class="body"><div class="top"><h3>ML Derivatives Model</h3><span class="role">Quant project</span></div>
+          <p>Predictive options pricing grounded in Black-Scholes. Isolates vega to trade volatility on rolling variances. The tile plots vega against spot as volatility sweeps.</p>
+          <div class="tags"><span>NumPy</span><span>Pandas</span><span>Backtesting</span><span>Quant</span></div></div>
+      </article>
+      <article class="proj" data-tags="autocad xflr5 aerospace leadership">
+        <a class="lnk" href="https://github.com/olivercarleton/Physics" target="_blank" rel="noopener" aria-label="SAE Aero design reports on GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <div class="viz"><canvas data-viz="airfoil"></canvas><span class="readout" data-ro></span></div>
+        <div class="body"><div class="top"><h3>SAE Aero Design West 2025</h3><span class="role">Team lead</span></div>
+          <p>Designed, funded and built a radio-controlled aircraft for the Tulane micro class entry. Airfoil and stability analysis in XFLR5, drawings in AutoCAD.</p>
+          <div class="tags"><span>XFLR5</span><span>AutoCAD</span><span>Aerospace</span><span>Leadership</span></div></div>
+      </article>
+
+      <article class="proj" data-tags="python reinforcement-learning ml">
+        <a class="lnk" href="https://github.com/olivercarleton/RL-ML" target="_blank" rel="noopener" aria-label="RL-ML on GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <div class="viz"><canvas data-viz="gridworld"></canvas><span class="readout" data-ro></span></div>
+        <div class="body"><div class="top"><h3>Reinforcement Learning Agents</h3><span class="role">RL-ML</span></div>
+          <p>Value iteration, Q-learning and approximate Q-learning agents for Gridworld, a crawler robot and Pacman. The tile runs value iteration live on a Gridworld with a cliff.</p>
+          <div class="tags"><span>Python</span><span>Reinforcement learning</span><span>ML</span></div></div>
+      </article>
+      <article class="proj" data-tags="python numpy tensorflow pytorch physics">
+        <a class="lnk" href="https://github.com/olivercarleton/Computational-Physics" target="_blank" rel="noopener" aria-label="Computational Physics on GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <div class="viz"><canvas data-viz="montecarlo"></canvas><span class="readout" data-ro></span></div>
+        <div class="body"><div class="top"><h3>Computational Physics</h3><span class="role">Monte Carlo, RK4, Fourier</span></div>
+          <p>Monte Carlo and Metropolis sampling, Fourier transforms, Laplace and RK4 solvers, Brownian motion, spline fits and Schr&ouml;dinger eigenproblems in TensorFlow and PyTorch.</p>
+          <div class="tags"><span>Python</span><span>NumPy</span><span>TensorFlow</span><span>PyTorch</span></div></div>
+      </article>
+      <article class="proj" data-tags="python scikit-learn pandas ml">
+        <a class="lnk" href="https://github.com/olivercarleton/Flight-Delay-Predictive-Model" target="_blank" rel="noopener" aria-label="Flight delay model on GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <div class="viz"><canvas data-viz="delays"></canvas><span class="readout" data-ro></span></div>
+        <div class="body"><div class="top"><h3>Flight Delay Predictor</h3><span class="role">Classifier</span></div>
+          <p>Predicts departure delays from carrier, route, hour and weather features. The tile replays predicted delay probability against observed delays by hour of day.</p>
+          <div class="tags"><span>Python</span><span>scikit-learn</span><span>Pandas</span></div></div>
+      </article>
+
+      <article class="proj" data-tags="matlab materials engineering">
+        <a class="lnk" href="https://github.com/olivercarleton/Materials-Engineering-Selector" target="_blank" rel="noopener" aria-label="Materials selector on GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <div class="viz"><canvas data-viz="stress"></canvas><span class="readout" data-ro></span></div>
+        <div class="body"><div class="top"><h3>Materials Selector</h3><span class="role">MATLAB</span></div>
+          <p>Compares engineering metals from input properties: stress-strain plots, modulus of resilience, toughness and specific strength, with a summary report written to disk.</p>
+          <div class="tags"><span>MATLAB</span><span>Materials</span><span>Engineering</span></div></div>
+      </article>
+      <article class="proj" data-tags="physics latex research">
+        <a class="lnk" href="https://github.com/olivercarleton/Physics" target="_blank" rel="noopener" aria-label="Physics reports on GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <div class="viz"><canvas data-viz="photo"></canvas><span class="readout" data-ro></span></div>
+        <div class="body"><div class="top"><h3>Modern Physics Lab</h3><span class="role">Reports</span></div>
+          <p>Measured Planck's constant from LED stopping potentials across wavelengths, and analyzed critical temperatures of high-temperature superconductors.</p>
+          <div class="tags"><span>Physics</span><span>LaTeX</span><span>Research</span></div></div>
+      </article>
+      <article class="proj" data-tags="c++ systems algorithms">
+        <a class="lnk" href="https://github.com/olivercarleton/Cpp" target="_blank" rel="noopener" aria-label="C++ projects on GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <div class="viz"><canvas data-viz="list"></canvas><span class="readout" data-ro></span></div>
+        <div class="body"><div class="top"><h3>C++ Systems Work</h3><span class="role">22 modules</span></div>
+          <p>Pointers, dynamic memory, linked lists, recursion, operator overloading, sorting and searching, file I/O and a projectile simulator. The tile animates a linked-list insert and traversal.</p>
+          <div class="tags"><span>C++</span><span>Systems</span><span>Algorithms</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-h">
+      <div>
+        <div class="eyebrow">Skills</div>
+        <h2>Skills</h2>
+      </div>
+      <p>Click a skill to filter the projects.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="sk">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3.5"/></svg>AI &amp; agents</h3>
+        <div class="keys">
+          <button class="key" data-skill="agentic workflows" type="button">Agentic workflows</button><button class="key" data-skill="langgraph" type="button">LangGraph</button><button class="key" data-skill="mcp" type="button">MCP</button><button class="key" data-skill="deep agents" type="button">Deep Agents</button><button class="key" data-skill="langsmith" type="button">LangSmith</button><button class="key" data-skill="llm" type="button">LLM apps</button><button class="key" data-skill="nlp" type="button">NLP</button><button class="key" data-skill="neural networks" type="button">Neural networks</button><button class="key" data-skill="tensorflow" type="button">TensorFlow</button><button class="key" data-skill="pytorch" type="button">PyTorch</button><button class="key" data-skill="scikit-learn" type="button">scikit-learn</button><button class="key" data-skill="sagemaker" type="button">SageMaker</button><button class="key" data-skill="reinforcement-learning" type="button">Reinforcement learning</button><button class="key" data-skill="anomaly-detection" type="button">Anomaly detection</button>
+        </div>
+      </div>
+      <div class="sk">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>Data &amp; platforms</h3>
+        <div class="keys">
+          <button class="key" data-skill="snowflake" type="button">Snowflake</button><button class="key" data-skill="bigquery" type="button">BigQuery</button><button class="key" data-skill="sql" type="button">SQL</button><button class="key" data-skill="mysql" type="button">MySQL</button><button class="key" data-skill="pyspark" type="button">PySpark</button><button class="key" data-skill="pandas" type="button">Pandas</button><button class="key" data-skill="numpy" type="button">NumPy</button><button class="key" data-skill="coalesce" type="button">Coalesce Pipelines</button><button class="key" data-skill="redis" type="button">Redis</button><button class="key" data-skill="tableau" type="button">Tableau</button><button class="key" data-skill="streamlit" type="button">Streamlit</button><button class="key" data-skill="backtesting" type="button">Backtesting</button><button class="key" data-skill="web-scraping" type="button">Web scraping</button><button class="key" data-skill="excel" type="button">Excel</button>
+        </div>
+      </div>
+      <div class="sk">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg>Languages, web &amp; infra</h3>
+        <div class="keys">
+          <button class="key" data-skill="python" type="button">Python</button><button class="key" data-skill="c++" type="button">C++</button><button class="key" data-skill="java" type="button">Java</button><button class="key" data-skill="javascript" type="button">JavaScript</button><button class="key" data-skill="react" type="button">React</button><button class="key" data-skill="matlab" type="button">MATLAB</button><button class="key" data-skill="rest-apis" type="button">REST APIs</button><button class="key" data-skill="docker" type="button">Docker</button><button class="key" data-skill="ci/cd" type="button">CI/CD</button><button class="key" data-skill="azure devops" type="button">Azure DevOps</button><button class="key" data-skill="git" type="button">Git</button><button class="key" data-skill="automation" type="button">Process automation</button><button class="key" data-skill="latex" type="button">LaTeX</button><button class="key" data-skill="autocad" type="button">AutoCAD</button><button class="key" data-skill="xflr5" type="button">XFLR5</button>
+        </div>
+      </div>
+    </div>
+    <div class="skills-bar" id="skillsBar"><span id="skillsMsg">No filter. Showing all 11 projects.</span><button type="button" id="skillsClear" hidden>Clear</button></div>
+    <div class="marquee" aria-hidden="true"><div class="track" id="marquee"></div></div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="sec-h">
+      <div>
+        <div class="eyebrow">Education</div>
+        <h2>Education</h2>
+      </div>
+    </div>
+    <div class="edu">
+      <div class="box">
+        <h3>Tulane University</h3>
+        <p class="sub">School of Science and Engineering, New Orleans</p>
+        <p style="margin-top:14px">Bachelor of Engineering, May 2025. Major in Computational Engineering and Physics, minor in Mathematics. GPA 3.8 / 4.0.</p>
+        <div class="row"><span class="chip">Computational Engineering</span><span class="chip">Physics</span><span class="chip">Mathematics minor</span><span class="chip">GPA 3.8</span></div>
+      </div>
+      <div class="box">
+        <h3>Leadership</h3>
+        <ul class="lead-list">
+          <li><span class="r">President</span><span>Algorithmic Trading Club</span></li>
+          <li><span class="r">Team lead</span><span>SAE Aero Design West 2025, Tulane micro class</span></li>
+          <li><span class="r">Member</span><span>Engineers Without Borders</span></li>
+          <li><span class="r">Tutor</span><span>Robotics software and materials engineering</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h2>Get in touch.</h2>
+    <div class="email-box"><span id="emailText">ogcarleton@gmail.com</span><button type="button" data-copy="ogcarleton@gmail.com">Copy</button></div>
+    <div class="row">
+      <a class="btn btn-accent" href="https://www.linkedin.com/in/oliver-carleton" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/olivercarleton" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Oliver Carleton. New York City.</span>
+    <span class="hint"><kbd>Ctrl</kbd> <kbd>K</kbd> to jump anywhere</span>
+    <span class="links"><a href="#top">Top</a><a href="https://github.com/olivercarleton" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/oliver-carleton" target="_blank" rel="noopener">LinkedIn</a></span>
+  </div>
+</footer>
+
+<div class="cmdk" id="cmdk" role="dialog" aria-modal="true" aria-label="Command menu">
+  <div class="cmdk-box">
+    <div class="cmdk-in">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="cmdInput" type="text" placeholder="Jump to a section, project or link..." autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="cmdk-list" id="cmdList"></div>
+    <div class="cmdk-ft"><span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span><span><kbd>&crarr;</kbd> select</span><span><kbd>Esc</kbd> close</span></div>
+  </div>
+</div>
+<div class="toast" id="toast"><i></i><span id="toastMsg">Copied</span></div>
+
+<script src="main.js"></script>
+</body>
+</html>
